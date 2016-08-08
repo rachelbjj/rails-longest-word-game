@@ -1,7 +1,9 @@
 <h1>Game#prompt</h1>
-<p> <=% @play_grid =></p>
-<p><form action="/result" method="get">
+<p> <%= @play_grid %></p>
+<p><form action="/result">
   <input type="text" name="query">
+  <input type="hidden" name="time">
   <input type="submit">
 </form>
 </p>
+
