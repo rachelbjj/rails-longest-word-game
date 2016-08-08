@@ -13,17 +13,12 @@ class GameController < ApplicationController
   end
 
   private
-    def run_game(attempt, start_time, end_time)
-
-
-    response = open("http://api.wordreference.com/0.8/80143/json/enfr/#{attempt.downcase}")
-    json = JSON.parse(response.read.to_s)
-
+    def run_game(word, start_time, end_time)
 
       score = 0
       message= []
 
-      if attempt.size > 2
+      if word.size > 2
         score =+ 3
       else
         result[:score] += 2
